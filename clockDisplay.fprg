@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="clockDisplay"/>
+        <attribute name="authors" value="caffe"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 12:35:58 AM"/>
+        <attribute name="created" value="Y2FmZmU7VEhSME5FOzIwMjQtMDktMTc7MTI6MTI6NDcgQU07MjIwNQ=="/>
+        <attribute name="edited" value="Y2FmZmU7VEhSME5FOzIwMjQtMDktMTc7MTI6MzU6NTggQU07MTsyMzIw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <declare name="minutes" type="Integer" array="False" size=""/>
+            <declare name="seconds" type="Integer" array="False" size=""/>
+            <assign variable="hours" expression="0"/>
+            <assign variable="minutes" expression="0"/>
+            <assign variable="seconds" expression="0"/>
+            <while expression="hours &lt; 60">
+                <while expression="minutes &lt; 60">
+                    <while expression="seconds &lt; 60">
+                        <output expression="hours" newline="False"/>
+                        <output expression="minutes" newline="False"/>
+                        <output expression="seconds" newline="True"/>
+                        <assign variable="seconds" expression="seconds + 1"/>
+                    </while>
+                    <assign variable="seconds" expression="0"/>
+                    <assign variable="minutes" expression="minutes + 1"/>
+                </while>
+                <assign variable="minutes" expression="0"/>
+                <assign variable="hours" expression="hours + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

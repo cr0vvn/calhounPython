@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="shippingCharges"/>
+        <attribute name="authors" value="caffe"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 12:11:26 AM"/>
+        <attribute name="created" value="Y2FmZmU7VEhSME5FOzIwMjQtMDktMTA7MTA6NTk6MjcgQU07MjIwNQ=="/>
+        <attribute name="edited" value="Y2FmZmU7VEhSME5FOzIwMjQtMDktMTc7MTI6MTE6MjYgQU07MjsyMzEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <input variable="weight"/>
+            <if expression="weight &gt; 10">
+                <then>
+                    <assign variable="rate" expression="4.75"/>
+                </then>
+                <else>
+                    <if expression="weight &gt; 6">
+                        <then>
+                            <assign variable="rate" expression="4"/>
+                        </then>
+                        <else>
+                            <if expression="weight &gt; 2">
+                                <then>
+                                    <assign variable="rate" expression="3"/>
+                                </then>
+                                <else>
+                                    <if expression="weight &gt; 0">
+                                        <then>
+                                            <assign variable="rate" expression="1.5"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="rate" expression="0"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="rate * weight" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

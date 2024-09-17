@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="distanceTraveled"/>
+        <attribute name="authors" value="caffe"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 01:31:44 PM"/>
+        <attribute name="created" value="Y2FmZmU7VEhSME5FOzIwMjQtMDktMTc7MTI6NDk6MjYgUE07MjIyNw=="/>
+        <attribute name="edited" value="Y2FmZmU7VEhSME5FOzIwMjQtMDktMTc7MDE6MzE6NDQgUE07MTsyMzI0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <input variable="speed"/>
+            <input variable="hrsTraveled"/>
+            <for variable="hrs" start="1" end="hrsTraveled" direction="inc" step="1">
+                <assign variable="distance" expression="speed * hrs"/>
+                <output expression="hrs" newline="False"/>
+                <output expression="distance" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
